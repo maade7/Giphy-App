@@ -1,0 +1,26 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url(../images/tumblr_oha80oCzGY1u2y46bo4_1280.jpg);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    min-height: calc(100vh - 9rem);
+}
+
+footer {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    height: 4rem;
+    width: 4rem;
+}
