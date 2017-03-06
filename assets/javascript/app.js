@@ -29,7 +29,7 @@ function makeGiphys() {
     var search = $(self).text();
     var offset = $(self).attr('offset');
     console.log($(self).attr('offset'));
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=10&offset=" + offset;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=10&offset=" + offset;
     console.log(queryURL);
     $.ajax({
         url: queryURL,
