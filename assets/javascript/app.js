@@ -1,4 +1,4 @@
-var buttonArry = ['security cam', 'funny fail', 'pandas', "star trek", 'snakes', 'dance']
+var buttonArry = ['security cam', 'funny fail', 'pandas', "star wars", 'american sign language', 'dance']
 var active = ''
 // make new button
 function makeButton() {
@@ -39,7 +39,7 @@ function makeGiphys() {
     var offset = $(self).attr('offset');
     console.log($(self).attr('offset'));
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=10&offset=" + offset;
-    console.log(queryURL);
+
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -51,7 +51,7 @@ function makeGiphys() {
         //offset response
         if (response.pagination.total_count < 5000) {
             offset = Math.floor((Math.random() * response.pagination.total_count) - 10);
-            console.log("<");
+
         } else {
             offset = Math.floor((Math.random() * 5000) - 10);
         }
