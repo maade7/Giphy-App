@@ -1,11 +1,7 @@
 body {
     height: 100%;
     margin: 0;
-}
-
-body {
-    background-color: black;
-    background-image: url(../images/tumblr_oha80oCzGY1u2y46bo4_1280.jpg);
+    background-color: lightgrey;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     background-size: cover;
@@ -14,13 +10,81 @@ body {
     background-attachment: fixed;
 }
 
-.wrapper {
-    min-height: calc(100vh - 9rem);
+.content {
+    margin: 3rem;
+    text-align: left;
 }
 
-footer {
-    margin-left: 3rem;
-    margin-bottom: 1rem;
-    height: 4rem;
-    width: 4rem;
+label {
+    color: teal;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.input {
+    margin: .2rem;
+    float: right;
+    text-align: center;
+}
+
+#inputButton {
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5rem;
+    color: white;
+    border-style: none;
+    background-color: teal;
+    box-shadow: none;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    margin: .2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5rem;
+    color: white;
+    padding: 1rem;
+    min-width: 8rem;
+    border-style: none;
+    background-color: grey;
+    box-shadow: none;
+}
+
+#inputButton:hover, .btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: brightness(1.2);
+}
+
+.btn:active {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+.active {
+    box-shadow: none;
+    background-color: teal;
+}
+
+.gif {
+    cursor: pointer;
+    outline: none;
+    padding-top: .4rem;
+    margin: .2rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-style: none;
+    background-color: grey;
+}
+
+.gif:hover {
+    filter: brightness(1.2);
+}
+
+[still~="N"] {
+    background-color: teal;
 }
