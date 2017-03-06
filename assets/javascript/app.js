@@ -1,30 +1,39 @@
 var buttonArry = ['security cam', 'funny fail', 'pandas', "star trek", 'snakes', 'dance']
-
+var active = ''
 // make new button
 function makeButton() {
     $(".buttons").empty();
     for (var i = 0; i < buttonArry.length; i++) {
-        $(".buttons").append('<button class="btn" offset=0>' + buttonArry[i] + '</button>');
+        if (buttonArry[i] === active) {
+            $(".buttons").append('<button class="btn active" offset=0>' + buttonArry[i] + '</button>');
+        } else {
+            $(".buttons").append('<button class="btn" offset=0>' + buttonArry[i] + '</button>');
+        }
     }
 }
-
 // add to array
 $("#inputButton").on('click', function() {
     if ($("#inputField").val() !== '') {
-
         if (buttonArry.indexOf($("#inputField").val()) === -1) {
             buttonArry.push($("#inputField").val());
-
+            $("#inputField").val('');
             makeButton();
         }
     }
 
+});
+//enter key
+$("#inputField").keyup(function(event) {
+    if (event.keyCode == 13) {
+        $("#inputButton").click();
+    }
 });
 
 // make giphys
 function makeGiphys() {
     var self = this
     $(".btn").removeClass("active");
+    active = $(self).text();
     $(self).addClass("active");
     var search = $(self).text();
     var offset = $(self).attr('offset');
