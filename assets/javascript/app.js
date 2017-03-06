@@ -1,4 +1,4 @@
-var buttonArry = ['security cam', 'funny fail', 'diving', "star trek", 'snakes', 'dance']
+var buttonArry = ['security cam', 'funny fail', 'pandas', "star trek", 'snakes', 'dance']
 
 // make new button
 function makeButton() {
